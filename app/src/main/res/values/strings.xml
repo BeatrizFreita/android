@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">APP IMC E NCD</string>
+    <!--    Strings da Main Activity-->
+    <string name="main_title">Calculadora Saudável</string>
+    <string name="text_fazer_hoje">O que você deseja fazer hoje?</string>
+    <!--  Strings-->
+    <string-array name="estados">
+        <item>São Paulo</item>
+        <item>Minas Gerais</item>
+        <item>Parana</item>
+        <item>Pernambuco</item>
+        <item>Amazonas</item>
+        <item>Rio Grande do Sul</item>
+    </string-array>
+</resources>
