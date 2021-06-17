@@ -27,7 +27,7 @@ class ResultadoImcActivity : AppCompatActivity() {
         txtStatusRisk.text = resultados[1]
 
         // Armazenar os dados do usuário no SharedPreferences
-        val editPreferences = SharedPreferences.Editor()
+        //val editPreferences = SharedPreferences.Editor()
 
 
         txtDica.text = getDicaDoDia()
