@@ -1,10 +1,12 @@
-package br.senai.sp.jandira.imcapp20
+package br.senai.sp.jandira.imcapp20.ui
 
-import android.content.Context
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import br.senai.sp.jandira.imcapp20.R
+import br.senai.sp.jandira.imcapp20.calcularImc
+import br.senai.sp.jandira.imcapp20.getDicaDoDia
+import br.senai.sp.jandira.imcapp20.obter_status
 
 class ResultadoImcActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

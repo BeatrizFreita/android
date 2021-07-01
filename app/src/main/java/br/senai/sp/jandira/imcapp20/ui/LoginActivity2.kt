@@ -1,4 +1,4 @@
-package br.senai.sp.jandira.imcapp20
+package br.senai.sp.jandira.imcapp20.ui
 
 import android.content.Context
 import android.content.Intent
@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import br.senai.sp.jandira.imcapp20.R
+import kotlinx.android.synthetic.main.activity_login2.*
 
 class LoginActivity2 : AppCompatActivity() {
     lateinit var editUser: EditText
@@ -35,9 +37,20 @@ class LoginActivity2 : AppCompatActivity() {
         val user = editUser.text.toString()
         val pass = editPassword.text.toString()
 
-        if (user == "user@email.com" && pass == "123") {
-            val precerences = getSharedPreferences("biometria" , Context.MODE_PRIVATE)
-            val intent = Intent(this, MainActivity::class.java)
+        val dados = getSharedPreferences("dados_usuario", Context.MODE_PRIVATE)
+
+        val userPreferences = dados.getString("email", "Não encontrado")
+        val passPreferences = dados.getString("senha", "Não encontrado")
+
+        if (user == userPreferences && pass == passPreferences){
+            // Armazenar os dados no usuário no SharedPreferences
+            val intent = Intent(this, DashBoardActivity::class.java)
+
+            //Gravar e lembrar do SharedPreferences
+            val editor = dados.edit()
+            editor.putBoolean("lembrar", check_lembrar.isChecked)
+            editor.apply()
+
             startActivity(intent)
             finish()
         }else {

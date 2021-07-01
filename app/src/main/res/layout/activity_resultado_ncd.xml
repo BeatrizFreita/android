@@ -12,7 +12,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ResultadoNcdActivity"
+    tools:context=".ui.ResultadoNcdActivity"
     android:background="@color/colorPrimary">
 
     <androidx.cardview.widget.CardView
